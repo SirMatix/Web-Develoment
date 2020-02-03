@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Unique Wears</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="styles.css" type="text/css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="container col-12">
+			<div class="header row">
+				<div class="empty col-1">
+				</div>
+
+				<div class="image col-2">	
+					<img src="img/logo1.png" alt="logo">
+				</div>
+
+				<div class="mobileimg">
+					<img class="mobile" src="img/mob_logo.png" alt="mobile logo">
+				</div>
+
+				<div class="welcome col-6">
+					<img src="img/logo_tr.png" alt="welcome logo">
+				</div>
+
+				<div class="datetime col-2">
+					<div class="globe">
+						<img src="img/animatedglobe.gif" alt="gif image of rotating globe">
+					</div>	
+					<div class="date">
+						<p>Today is:&nbsp;&nbsp;</p><span id="datetime"></span><br><span id="day"></span>&nbsp;
+					</div>
+				</div>
+
+				<div class="empty col-1">
+				</div>
+			</div>
+
+			<div class="navigation row">
+				<div class="nav col-12" id="topNav">
+						<a href="index.html">Home</a>
+						<a href="sizes.html">Sizes</a>
+						<a href="products.html">Products</a>
+						<a href="contact.html">Contact</a>
+						<a class="active right" href="whole.html">Wholesale</a>
+				</div>
+			</div>
+			<div class="content row">
+				<div class="row">
+				<div class="col-12">
+				<h1>Welcome to our Page for <b>WHOLESALE</b> orders</h1>  
+				</div>
+				<div class="col-4">
+				<p>To order please get familiar with our offer. Each product has a specific number from 1-12
+				  and is of specific type(Male, Female, Boys, Girls). Please fill in appropriate fields.</p>
+				</div>
+				<div class="col-4">
+				<h4>Enjoy!</h4>
+				</div>
+				<div class="empty col-4">
+				<p> If You used enough fields and You have still available fields please select none.
+				 We can process up to 6 products high quantity orders at once. So if You need more than 6 products please submit order two times.</p>
+				</div>
+				</div>
+				<div class="question row">
+				<div class="col-6">
+				<p>Please tell us are you a company or person?</p>
+				<button name="person" id="toggle2">Person</button>
+				<button name="company" id="toggle">Company</button>
+				</div>
+				<div class="empty col-6">
+				</div>
+				</div>
+				<form method="get" action="https://www.w3schools.com/action_page.php">
+				<div class="person row" style="display:none" id="person">
+					<fieldset>
+						<legend>Personal details</legend>
+						<label>First name</label>
+						  <input type="text" name="first_name">
+						<label>Last name</label>
+						  <input type="text" name="last_name">
+						<label>Address</label>
+						  <input type="text" name="person_address">
+						<label>Email address</label>
+						  <input type="text" name="person_email">
+						<label>Phone number</label>
+						  <input type="text" name="person_phone">
+					</fieldset>
+				</div>
+				<div class="company row" style="display:none" id="company">
+				    <fieldset>
+				      <legend>Company details</legend>
+				      <label>Name</label>
+				        <input type="text" name="company_name">
+				      <label>Address</label>
+				        <input type="text" name="company_address">
+				      <label>Email address</label>
+				        <input type="text" name="company_email">
+				      <label>Phone number</label>
+				        <input type="text" name="company_phone">
+				    </fieldset>
+				</div>
+				<div class="order row">
+					<div class="contain row">
+					    <div class="col-4">
+					      <fieldset><legend>Product information</legend>
+					        <label>Product Type</label>
+					          <input type="radio" name="product_type" value="male">Male
+					          <input type="radio" name="product_type" value="female">Female
+					          <br>
+					          <input type="radio" name="product_type" value="boys">Boys
+					          <input type="radio" name="product_type" value="girls">Girls
+					          <input type="radio" name="product_type" value="none">None
+					        <br><br>
+					        <label>Product Number</label>
+					          <select name="product_name">
+					            <option value="1">1</option>
+					            <option value="2">2</option>
+					            <option value="3">3</option>
+					            <option value="4">4</option>
+					            <option value="5">5</option>
+					            <option value="6">6</option>
+					            <option value="7">7</option>
+					            <option value="8">8</option>
+					            <option value="9">9</option>
+					            <option value="10">10</option>
+					            <option value="11">11</option>
+					            <option value="12">12</option>
+					          </select>
+					        <br><br>
+					        <label>Color:</label>
+					          <select name="color">
+					            <option value="black">black</option>
+					            <option value="brown">brown</option>
+					            <option value="grey">grey</option>
+					            <option value="green">green</option>
+					          </select>
+					        <br><br>
+					        <label>Quantity:</label>
+					          <textarea name="quantity" rows="2" cols="3"></textarea>
+					          <br><br>
+					      </fieldset>
+					    </div>
+					    <div class="col-4">
+					      <fieldset><legend>Product information</legend>
+					        <label>Product Type</label>
+					          <input type="radio" name="product_type2" value="male">Male
+					          <input type="radio" name="product_type2" value="female">Female
+					          <br>
+					          <input type="radio" name="product_type2" value="boys">Boys
+					          <input type="radio" name="product_type2" value="girls">Girls
+					          <input type="radio" name="product_type2" value="none">None
+					        <br><br>
+					        <label>Product Number</label>
+					          <select name="product_name2">
+					            <option value="1">1</option>
+					            <option value="2">2</option>
+					            <option value="3">3</option>
+					            <option value="4">4</option>
+					            <option value="5">5</option>
+					            <option value="6">6</option>
+					            <option value="7">7</option>
+					            <option value="8">8</option>
+					            <option value="9">9</option>
+					            <option value="10">10</option>
+					            <option value="11">11</option>
+					            <option value="12">12</option>
+					          </select>
+					        <br><br>
+					        <label>Color:</label>
+					          <select name="color2">
+					            <option value="black">black</option>
+					            <option value="brown">brown</option>
+					            <option value="grey">grey</option>
+					            <option value="green">green</option>
+					          </select>
+					        <br><br>
+					        <label>Quantity:</label>
+					          <textarea name="quantity2" rows="2" cols="3"></textarea>
+					            <br><br>
+					      </fieldset>
+					    </div>
+					    <div class="col-4">
+					      <fieldset><legend>Product information</legend>
+					        <label>Product Type</label>
+					          <input type="radio" name="product_type3" value="male">Male
+					          <input type="radio" name="product_type3" value="female">Female
+					          <br>
+					          <input type="radio" name="product_type3" value="boys">Boys
+					          <input type="radio" name="product_type3" value="girls">Girls
+					          <input type="radio" name="product_type3" value="none">None
+					        <br><br>
+					        <label>Product Number</label>
+					          <select name="product_name3">
+					            <option value="1">1</option>
+					            <option value="2">2</option>
+					            <option value="3">3</option>
+					            <option value="4">4</option>
+					            <option value="5">5</option>
+					            <option value="6">6</option>
+					            <option value="7">7</option>
+					            <option value="8">8</option>
+					            <option value="9">9</option>
+					            <option value="10">10</option>
+					            <option value="11">11</option>
+					            <option value="12">12</option>
+					          </select>
+					        <br><br>
+					        <label>Color:</label>
+					          <select name="color3">
+					            <option value="black">black</option>
+					            <option value="brown">brown</option>
+					            <option value="grey">grey</option>
+					            <option value="green">green</option>
+					          </select>
+					        <br><br>
+					        <label>Quantity:</label>
+					          <textarea name="quantity3" rows="2" cols="3"></textarea>
+					            <br><br>
+					      </fieldset>
+					    </div>
+					</div>
+					<div class="contain row" style="display:none" id="invisible">
+					    <div class="col-4">
+					      <fieldset><legend>Product information</legend>
+					        <label>Product Type</label>
+					          <input type="radio" name="product_type4" value="male">Male
+					          <input type="radio" name="product_type4" value="female">Female
+					          <br>
+					          <input type="radio" name="product_type4" value="boys">Boys
+					          <input type="radio" name="product_type4" value="girls">Girls
+					          <input type="radio" name="product_type4" value="none">None
+					        <br><br>
+					        <label>Product Number</label>
+					          <select name="product_name4">
+					            <option value="1">1</option>
+					            <option value="2">2</option>
+					            <option value="3">3</option>
+					            <option value="4">4</option>
+					            <option value="5">5</option>
+					            <option value="6">6</option>
+					            <option value="7">7</option>
+					            <option value="8">8</option>
+					            <option value="9">9</option>
+					            <option value="10">10</option>
+					            <option value="11">11</option>
+					            <option value="12">12</option>
+					          </select>
+					        <br><br>
+					        <label>Color:</label>
+					          <select name="color4">
+					            <option value="black">black</option>
+					            <option value="brown">brown</option>
+					            <option value="grey">grey</option>
+					            <option value="green">green</option>
+					        </select>
+					        <br><br>
+					        <label>Quantity:</label>
+					          <textarea name="quantity4" rows="2" cols="3"></textarea>
+					            <br><br>
+					      </fieldset>
+					    </div>
+					    <div class="col-4">
+					      <fieldset><legend>Product information</legend>
+					        <label>Product Type</label>
+					          <input type="radio" name="product_type5" value="male">Male
+					          <input type="radio" name="product_type5" value="female">Female
+					          <br>
+					          <input type="radio" name="product_type5" value="boys">Boys
+					          <input type="radio" name="product_type5" value="girls">Girls
+					          <input type="radio" name="product_type5" value="none">None
+					        <br><br>
+					        <label>Product Number</label>
+					          <select name="product_name5">
+					            <option value="1">1</option>
+					            <option value="2">2</option>
+					            <option value="3">3</option>
+					            <option value="4">4</option>
+					            <option value="5">5</option>
+					            <option value="6">6</option>
+					            <option value="7">7</option>
+					            <option value="8">8</option>
+					            <option value="9">9</option>
+					            <option value="10">10</option>
+					            <option value="11">11</option>
+					            <option value="12">12</option>
+					          </select>
+					        <br><br>
+					        <label>Color:</label>
+					          <select name="color5">
+					            <option value="black">black</option>
+					            <option value="brown">brown</option>
+					            <option value="grey">grey</option>
+					            <option value="green">green</option>
+					          </select>
+					        <br><br>
+					        <label>Quantity:</label>
+					          <textarea name="quantity5" rows="2" cols="2"></textarea>
+					          <br><br>
+					      </fieldset>
+					    </div>
+					    <div class="col-4">
+					      <fieldset><legend>Product information</legend>
+					        <label>Product Type</label>
+					          <input type="radio" name="product_type6" value="male">Male
+					          <input type="radio" name="product_type6" value="female">Female
+					          <br>
+					          <input type="radio" name="product_type6" value="boys">Boys
+					          <input type="radio" name="product_type6" value="girls">Girls
+					          <input type="radio" name="product_type6" value="none">None
+					        <br><br>
+					        <label>Product Number</label>
+					          <select name="product_name6">
+					            <option value="1">1</option>
+					            <option value="2">2</option>
+					            <option value="3">3</option>
+					            <option value="4">4</option>
+					            <option value="5">5</option>
+					            <option value="6">6</option>
+					            <option value="7">7</option>
+					            <option value="8">8</option>
+					            <option value="9">9</option>
+					            <option value="10">10</option>
+					            <option value="11">11</option>
+					            <option value="12">12</option>
+					          </select>
+					        <br><br>
+					        <label>Color:</label>
+					          <select name="color6">
+					            <option value="black">black</option>
+					            <option value="brown">brown</option>
+					            <option value="grey">grey</option>
+					            <option value="green">green</option>
+					          </select>
+					        <br><br>
+					        <label>Quantity:</label>
+					          <textarea name="quantity6" rows="2" cols="2"></textarea>
+					          <br><br>
+					      </fieldset>
+					    </div>
+					</div>
+				</div>
+				<div class="submit row">
+				  <div class="empty col-4">
+				  </div>
+				  <div class="col-4">
+				    <fieldset><legend>Submit order</legend>
+				      <input type="submit" value="Submit order">
+				    </fieldset>
+				  </div>
+				  <div class="empty col-4">
+				  </div>
+				</div>
+				</form>
+				<div class="add row">
+				  <div class="empty col-4">
+				  </div>
+				  <div class="col-4">
+				    <button id="toggle3">Add more products</button>
+				  </div>
+				  <div class="empty col-4">
+				  </div>
+				</div>
+			</div>
+			<div class="footer row">
+				<div class="news col-4">
+					<br/><br/>
+					<form method="get" action="https://www.w3schools.com/action_page.php">
+						<label>Newsletter:<br>
+							<input type="email" name="email" value="Your email address"></label>
+							<input type="submit" value="OK">
+					</form>
+					<br/><br/>
+				</div>
+				<div class="social col-4">
+					<p>Stay connected</p>
+					<!-- Add font awesome icons -->
+					<a href="https://facebook.com/login" class="fa fa-facebook"></a>
+					<a href="https://twitter.com/login" class="fa fa-twitter"></a>
+					<a href="https://instagram.com/login" class="fa fa-instagram"></a>
+					<a href="https://linkedin.com/login" class="fa fa-linkedin"></a>
+				</div>
+				<div class="help col-4">
+					<p>Help and information:</p>
+					<ul>
+						<li><a href="terms.html">Terms and conditions</a></li>
+						<li><a href="privacy.html">Privacy Policy</a></li>
+						<li><a href="contact.html">Contact us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
